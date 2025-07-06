@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organizador de Poções Mágicas</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <defs>
+        <filter id="gooey">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+          <feColorMatrix
+            in="blur"
+            type="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+            result="highContrastGraphic"
+          />
+          <feComposite in="SourceGraphic" in2="highContrastGraphic" operator="atop" />
+        </filter>
+      </defs>
+    </svg>
+
+    <div class="container">
+      <h1>Organizador de Poções Mágicas</h1>
+
+      <div class="input-section">
+        <label for="potions-input">Insira suas poções (separadas por vírgula):</label>
+        <input type="text" id="potions-input" placeholder="Ex: Sono, Cura, Amor, Polissuco" />
+      </div>
+      <br />
+      <br />
+      <div class="buttons">
+        <button id="organize-btn" class="gooey-button">
+          ORGANIZAR
+          <span class="bubbles">
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+          </span>
+        </button>
+
+        <button id="return-btn" class="gooey-button">
+          RETORNAR
+          <span class="bubbles">
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+            <span class="bubble"></span>
+          </span>
+        </button>
+      </div>
+
+      <div class="result-section">
+        <h2>Resultado</h2>
+        <div id="calculation-steps"></div>
+        <div id="result-output"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
